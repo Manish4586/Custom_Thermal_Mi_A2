@@ -126,7 +126,7 @@ if [ "$DEVICE" = "Mi A2" ] || [ "$CODENAME" = "jasmine_sprout" ]; then
     echo "- Codename :" $CODENAME
     echo "- Installing module"
 else
-    echo "- Device not found !"
+    abort "- Device not found !"
 fi
 }
 
