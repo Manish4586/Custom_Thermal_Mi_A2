@@ -41,9 +41,10 @@ LATESTARTSERVICE=false
 
 print_modname() {
   ui_print "*******************************"
-  ui_print "Custom Thermal Engine For Mi A2"
+  ui_print "Thermal Configs For Mi A2"
+  ui_print "   Unleash The Power     "
   ui_print "              By               "
-  ui_print "  Manish4586 @ xda-developers   "
+  ui_print "  Manish4586 @ xda  "
   ui_print "*******************************"
 }
 
@@ -124,9 +125,9 @@ device_manager() {
 if [ "$DEVICE" = "Mi A2" ] || [ "$CODENAME" = "jasmine_sprout" ]; then
     echo "- Device :" $DEVICE
     echo "- Codename :" $CODENAME
-    echo "- Installing module"
+    echo "- Installing custom thermal configs"
 else
-    abort "- Device not found !"
+    abort "- Device not supported !"
 fi
 }
 

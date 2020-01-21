@@ -1,8 +1,6 @@
-id=thermals
-name=Custom Thermal Props For Xiaomi Mi A2
-version=v1.2a
-versionCode=1
+id=thermal
+name=Thermal Config For Mi A2
+version=v2
+versionCode=5
 author=Manish4586
-description=Optimized Thermals For Better Performance.
-changelogs= fixed overheating issues while using qc 3.0
-minMagisk=17000
+description=Optimized Thermals For Better Performance
