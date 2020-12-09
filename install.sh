@@ -20,9 +20,10 @@
 # Configs
 ##########################################################################################
 
-# Set to true if you need to enable Magic Mount
-# Most mods would like it to be enabled
-AUTOMOUNT=true
+# Set to true if you do *NOT* want Magisk to mount
+# any files for you. Most modules would NOT want
+# to set this flag to true
+SKIPMOUNT=false
 
 # Set to true if you need to load system.prop
 PROPFILE=false
@@ -40,12 +41,23 @@ LATESTARTSERVICE=false
 # Set what you want to show when installing your mod
 
 print_modname() {
-  ui_print "*******************************"
-  ui_print "Thermal Configs For Mi A2"
-  ui_print "   Unleash The Power     "
-  ui_print "              By               "
-  ui_print "  Manish4586 @ xda  "
-  ui_print "*******************************"
+  ui_print " "
+  ui_print "    *******************************************"
+  ui_print "    *Mi A2 Thermals*"
+  ui_print "    *******************************************"
+  ui_print "    *by Manish4586 @xda*"
+  ui_print "    *******************************************"
+  ui_print " Installation On Going "
+  ui_print "    *******************************************"
+}
+
+### Installation
+# Copy/extract your module files into $MODPATH in on_install.
+
+on_install() {
+	# extract APKs
+	ui_print "- Extracting module files"
+	unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
 }
 
 ##########################################################################################
@@ -99,7 +111,6 @@ set_permissions() {
 # update-binary. Refrain from adding code directly into update-binary, as it will make it
 # difficult for you to migrate your modules to newer template versions.
 # Make update-binary as clean as possible, try to only do function calls in it.
-
 # load system property file
 grep_prop() {
   local REGEX="s/^$1=//p"

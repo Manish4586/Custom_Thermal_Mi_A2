@@ -1,6 +1,6 @@
 id=thermal
-name=Thermal Config For Mi A2
-version=v2
-versionCode=5
+name=thermal
+version=v3b
+versionCode=7
 author=Manish4586
-description=Optimized Thermals For Better Performance
+description= Pubg Thermal, Improved Throttling
